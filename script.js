@@ -33,10 +33,16 @@ class Calculator {
         buttonContainer.setAttribute("id", "keypad")
         const operators = "./*+-";
         const appendValue = (e, display) => {
-            if(display.value.includes(" ")) display.value = ""
-            display.value += e.target.innerHTML
+            if(display.value.includes(" "))
+                display.value = e.target.innerHTML
+            else
+                display.value += e.target.innerHTML
         }
-        const appendWithValidation = (e, display) => {!operators.includes(display.value.slice(-1)) ? display.value += e.target.innerHTML : {}}
+        const appendWithValidation = (e, display) => {
+            display.value = display.value.replace(" ", "")
+            if(!operators.includes(display.value.slice(-1)))
+                display.value += e.target.innerHTML
+        }
 
         const buttons = [
             {text:"RESET", action: (e, display) => display.value = "", style: "colSpan red"} ,
