@@ -1,0 +1,54 @@
+
+#content {
+    border-radius: 10px;
+    border: 1px solid steelblue;
+    width: 400px;
+    padding: 10px;
+}
+
+#title {
+    font-family: Arial;
+    font-size: 18pt;
+}
+
+#visor {
+    width: 98%;
+    margin: auto;
+    height: 50px;
+    border-radius: 10px;
+    border: 1px solid #304148;
+    font-size: 30px;
+    color: #525252;
+}
+
+#keypad {
+    border-radius: 10px;
+    border: 1px solid #304148;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 10px;
+    padding: 10px;
+    background-color: #525252;
+    margin-top: 10px;
+}
+
+#keypad button {
+    background-color: #ddd !important;
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+    border-radius: 9px;
+}
+
+#keypad .rowSpan {
+   grid-column: span 2;
+}
+
+#keypad .red {
+    background-color: #f67272 !important;;
+}
+
+#keypad .blue {
+    background-color: #62b1ef !important;;
+}
